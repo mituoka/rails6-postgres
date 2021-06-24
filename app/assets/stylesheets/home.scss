@@ -1,0 +1,135 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+// 設定値
+$bace-color: #a2997f;
+$accent-color: #6e6457;
+$sub-color: #cfdedf;
+$white-color: #fff;
+
+$header-color: rgba(184, 124, 124, 0.25);
+
+body {
+	background-color: $bace-color;
+	margin: 0;
+	font-size: 20px;
+	font-family: Vanity, cursive;
+	max-width: 100%;
+	max-height: 100%;
+	font-family: "Vollkorn", serif;
+}
+
+header {
+	height: 60px;
+	display: flex;
+	background-color: $header-color;
+	z-index: 10;
+	position: relative;
+
+	.header_logo {
+		display: flex;
+		height: 100%;
+		align-items: center;
+		flex: 1;
+	}
+	.title_name {
+		text-overflow: ellipsis;
+	}
+	.header_menus {
+		width: 400px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.button {
+			color: $white-color;
+			width: 33%;
+			padding: 10px;
+			margin-left: 5px;
+			background-color: $sub-color;
+			text-align: center;
+			border-bottom: double 5px $bace-color;
+		}
+	}
+}
+
+.top-content {
+	width: 90%;
+	margin: 0 auto;
+	// display: flex;
+	// justify-content: space-between;
+	// flex-wrap: wrap;
+
+	img {
+		padding-top: 0.7%;
+		padding-right: 0.5%;
+		width: 50vh;
+	}
+}
+
+.top_contener {
+	.top_content {
+		margin: 0 auto;
+		width: 80%;
+
+		.image_container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.image_info {
+				display: flex;
+				flex-direction: column;
+			}
+			.image_description {
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+.new_container {
+	text-align: center;
+	.form {
+		width: 50%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: left;
+		flex-direction: column;
+		text-align: left;
+
+		.from_element {
+			display: flex;
+			padding-top: 3%;
+
+			textarea {
+				resize: none;
+				border-radius: 0.5%;
+				width: 60%;
+				height: 20vh;
+			}
+		}
+	}
+	.submit_button {
+		width: 200px;
+		margin: 3% auto;
+		display: inline-block;
+		border-radius: 5%; /* 角丸       */
+		font-size: 18pt; /* 文字サイズ */
+		text-align: center; /* 文字位置   */
+		cursor: pointer; /* カーソル   */
+		padding: 12px 37px; /* 余白       */
+		background: #000088; /* 背景色     */
+		color: #ffffff; /* 文字色     */
+		line-height: 1em; /* 1行の高さ  */
+		transition: 0.3s; /* なめらか変化 */
+		box-shadow: 6px 6px 3px #666666; /* 影の設定 */
+		border: 2px solid #000088; /* 枠の指定 */
+	}
+	.submit_button:hover {
+		box-shadow: none; /* カーソル時の影消去 */
+		color: #000; /* 背景色     */
+		background: #ffffff; /* 文字色     */
+	}
+}
