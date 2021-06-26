@@ -1,20 +1,24 @@
 <div class="new_container">
   <p>新規投稿</p>
+  <%= form_tag("/home/create" ,{multipart: true}) do %>
   <div class="form">
     <div class="from_element">
-      <span>タイトル：</span>
-      <input type="text" name="example" >
+        <span>タイトル：</span>
+        <input type="text" name="title" >
+      </div>
+      <div class="from_element">
+        <span>画像ファイル：</span>
+        <input type="file" name="image_url" accept="image/jpeg, image/png">
+      </div>
+      <div class="from_element">
+        <span>関連リンク：</span>
+        <input type="text" name="link_url">
+      </div>
+      <div class="from_element">
+        <span>説明：</span>
+        <textarea name="description"></textarea>
     </div>
-    <div class="from_element">
-      <span>画像ファイル：</span>
-      <input type="file" name="example" accept="image/jpeg, image/png">
-    </div>
-    <div class="from_element">
-      <span>説明：</span>
-      <textarea></textarea>
-    </div>
-
-    <input class="submit_button" type="submit" value="送信する">
   </div>
-
+  <input class="submit_button" type="submit" value="送信する">
+  <% end %>
 </div>

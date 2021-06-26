@@ -1,0 +1,3 @@
+class PostsData < ApplicationRecord
+
+end

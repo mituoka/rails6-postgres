@@ -1,48 +1,16 @@
-<div class='top_contener'>
-  <div class="top_content">
+<div class="top_content">
+    <% @posts.each do |post| %>
     <div class="image_container">
-      <div class="image_info">
-        <p>画像タイトル</p>
-        <img src="/image/2_.jpg">
-        <span>出典リンク</span>  
-      </div>
-      <div class="image_description">
-        <p>説明</p>
-        <p>あああああああああああああああああ</p>
-      </div>
-    </div>    
-    <div class="image_container">
-      <div class="image_info">
-        <p>画像タイトル</p>
-        <img src="/image/3_.jpg">
-        <span>出典リンク</span>  
-      </div>
-      <div class="image_description">
-        <p>説明</p>
-        <p>あああああああああああああああああ</p>
-      </div>
-    </div>
-    <div class="image_container">
-      <div class="image_info">
-        <p>画像タイトル</p>
-        <img src="/image/4_.png">
-        <span>出典リンク</span>  
-      </div>
-      <div class="image_description">
-        <p>説明</p>
-        <p>あああああああああああああああああ</p>
-      </div>
-    </div>
-    <div class="image_container">
-      <div class="image_info">
-        <p>画像タイトル</p>
-        <img src="/image/5_.jpg">
-        <span>出典リンク</span>  
-      </div>
-      <div class="image_description">
-        <p>説明</p>
-        <p>あああああああああああああああああ</p>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="image_info">
+          <p><%= post.title %></p>
+          <img src="<%= "/images/#{post.image_url}"%>">
+          <span><%= post.link_url %></span>  
+        </div>
+        <div class="image_description">
+          <p>説明</p>
+          <p><%= post.description %></p>
+        </div>
+    </div>   
+    <% end %>
+</div> 
+

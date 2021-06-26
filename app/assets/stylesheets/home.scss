@@ -3,13 +3,20 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 // 設定値
-$bace-color: #a2997f;
-$accent-color: #6e6457;
-$sub-color: #cfdedf;
+// $bace-color: #f5e8cf;
+// $accent-color: #efc3bd;
+// $sub-color: #957e80;
+$bace-color: #fff5e0;
+$accent-color: #1a0b08;
+$sub-color: #e3dfdc;
+$button-color: #ffc0cb;
 $white-color: #fff;
 
 $header-color: rgba(184, 124, 124, 0.25);
-
+a:link {
+	color: $white-color;
+}
+// 共通設定
 body {
 	background-color: $bace-color;
 	margin: 0;
@@ -37,7 +44,7 @@ header {
 		text-overflow: ellipsis;
 	}
 	.header_menus {
-		width: 400px;
+		width: 100vh;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -47,43 +54,35 @@ header {
 			width: 33%;
 			padding: 10px;
 			margin-left: 5px;
-			background-color: $sub-color;
+			background-color: $button-color;
 			text-align: center;
 			border-bottom: double 5px $bace-color;
 		}
 	}
 }
 
-.top-content {
-	width: 90%;
+// トップページの設定
+
+.top_content {
+	width: 60%;
 	margin: 0 auto;
-	// display: flex;
-	// justify-content: space-between;
-	// flex-wrap: wrap;
-
-	img {
-		padding-top: 0.7%;
-		padding-right: 0.5%;
-		width: 50vh;
-	}
-}
-
-.top_contener {
-	.top_content {
-		margin: 0 auto;
-		width: 80%;
-
-		.image_container {
+	text-align: center;
+	.image_container {
+		width: 100%;
+		display: flex;
+		justify-content: left;
+		.image_info {
 			display: flex;
-			justify-content: center;
-			align-items: center;
-			.image_info {
-				display: flex;
-				flex-direction: column;
+			flex-direction: column;
+			img {
+				padding-top: 0.7%;
+				padding-right: 0.5%;
+				width: 50vh;
 			}
-			.image_description {
-				font-size: 20px;
-			}
+		}
+		.image_description {
+			font-size: 20px;
+			margin-left: 5%;
 		}
 	}
 }
